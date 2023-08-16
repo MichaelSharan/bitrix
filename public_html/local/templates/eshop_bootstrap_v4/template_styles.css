@@ -118,7 +118,9 @@ h1,h2,h3,h4,h5 {
 
 .bx-header-logo { order: 1 }
 
-.bx-header-personal { order: 3 }
+.bx-header-test { order: 3 }
+
+.bx-header-personal { order: 4 }
 
 .bx-header-contact { order: 2 }
 

@@ -23,10 +23,13 @@ $curPage = $APPLICATION->GetCurPage(true);
 </head>
 <body class="bx-background-image bx-theme-<?=$theme?>" <?$APPLICATION->ShowProperty("backgroundImage");?>>
 <div id="panel"><? $APPLICATION->ShowPanel(); ?></div>
-<?$APPLICATION->IncludeComponent(
-	"bitrix:eshop.banner",
-	"",
-	array()
+<?$APPLICATION->IncludeComponent("bitrix:eshop.banner", "", array(
+	
+	),
+	false,
+	array(
+	"ACTIVE_COMPONENT" => "N"
+	)
 );?>
 <div class="bx-wrapper" id="bx_eshop_wrap">
 	<header class="bx-header">
@@ -86,6 +89,18 @@ $curPage = $APPLICATION->GetCurPage(true);
 					);?>
 				</div>
 
+			    <div class = 'col bx-header-test'>
+			        <?$APPLICATION->IncludeComponent(
+						"bitrix:main.include",
+						"",
+						array(
+							"AREA_FILE_SHOW" => "file",
+							"PATH" => SITE_DIR."local/templates/eshop_bootstrap_v4/include/test_text.php"
+						),
+						false
+					);?>
+			    </div>	
+
 				<div class="col bx-header-contact">
 					<div class="d-flex align-items-center justify-content-between justify-content-md-center flex-column flex-sm-row flex-md-column flex-lg-row">
 						<div class="p-lg-3 p-1">
@@ -120,6 +135,7 @@ $curPage = $APPLICATION->GetCurPage(true);
 								</div>
 							</div>
 						</div>
+
 					</div>
 				</div>
 			</div>
