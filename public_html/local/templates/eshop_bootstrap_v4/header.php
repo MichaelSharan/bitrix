@@ -38,33 +38,16 @@ $curPage = $APPLICATION->GetCurPage(true);
 			<div class="row pt-0 pt-md-3 mb-3 align-items-center" style="position: relative;">
 				<div class="d-block d-md-none bx-menu-button-mobile" data-role='bx-menu-button-mobile-position'></div>
 				<div class="col-12 col-md-auto bx-header-logo">
-					<a class="bx-logo-block d-none d-md-block" href="<?=SITE_DIR?>">
-						<?$APPLICATION->IncludeComponent(
-	"bitrix:main.include", 
-	".default", 
-	array(
-		"AREA_FILE_SHOW" => "page",
-		"PATH" => SITE_DIR."include/company_logo.php",
-		"COMPONENT_TEMPLATE" => ".default",
-		"AREA_FILE_SUFFIX" => "inc",
-		"EDIT_TEMPLATE" => ""
-	),
-	false
-);?>
-					</a>
-					<a class="bx-logo-block d-block d-md-none text-center" href="<?=SITE_DIR?>">
-						<?$APPLICATION->IncludeComponent(
-	"bitrix:main.include", 
-	".default", 
-	array(
-		"AREA_FILE_SHOW" => "page",
-		"PATH" => SITE_DIR."include/company_logo_mobile.php",
-		"COMPONENT_TEMPLATE" => ".default",
-		"AREA_FILE_SUFFIX" => "inc",
-		"EDIT_TEMPLATE" => ""
-	),
-	false
-);?>
+					<a class="bx-logo-block d-md-block" href="<?=SITE_DIR?>">
+						<? $APPLICATION->IncludeComponent(
+                        	"bitrix:main.include", 
+                        	"", 
+                        	array(
+                        		"AREA_FILE_SHOW" => "file",
+                        		"PATH" => SITE_DIR."include/company_logo.php"
+                        	),
+                        	false
+                        );?>
 					</a>
 				</div>
 
@@ -88,18 +71,6 @@ $curPage = $APPLICATION->GetCurPage(true);
 						array()
 					);?>
 				</div>
-
-			    <div class = 'col bx-header-test'>
-			        <?$APPLICATION->IncludeComponent(
-						"bitrix:main.include",
-						"",
-						array(
-							"AREA_FILE_SHOW" => "file",
-							"PATH" => SITE_DIR."local/templates/eshop_bootstrap_v4/include/test_text.php"
-						),
-						false
-					);?>
-			    </div>	
 
 				<div class="col bx-header-contact">
 					<div class="d-flex align-items-center justify-content-between justify-content-md-center flex-column flex-sm-row flex-md-column flex-lg-row">
@@ -135,7 +106,17 @@ $curPage = $APPLICATION->GetCurPage(true);
 								</div>
 							</div>
 						</div>
-
+                    <div class = 'p-lg-3 p-1 bx-header-test'>
+			        <?$APPLICATION->IncludeComponent(
+						"bitrix:main.include",
+						"",
+						array(
+							"AREA_FILE_SHOW" => "file",
+							"PATH" => SITE_DIR."local/templates/eshop_bootstrap_v4/include/test_text.php"
+						),
+						false
+					);?>
+			    </div>	
 					</div>
 				</div>
 			</div>
