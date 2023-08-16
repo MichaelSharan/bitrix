@@ -64,17 +64,21 @@
 
 <div class="mb-5">
 	<?$APPLICATION->IncludeComponent(
-		"bitrix:main.include",
-		"",
-		Array(
-			"AREA_FILE_SHOW" => "file",
-			"PATH" => SITE_DIR."include/about.php",
-			"AREA_FILE_RECURSIVE" => "N",
-			"EDIT_MODE" => "html",
-		),
-		false,
-		Array('HIDE_ICONS' => 'N')
-	);?>
+	"bitrix:main.include", 
+	".default", 
+	array(
+		"AREA_FILE_SHOW" => "file",
+		"PATH" => SITE_DIR."include/about.php",
+		"AREA_FILE_RECURSIVE" => "N",
+		"EDIT_MODE" => "html",
+		"COMPONENT_TEMPLATE" => ".default",
+		"EDIT_TEMPLATE" => ""
+	),
+	false,
+	array(
+		"HIDE_ICONS" => "N"
+	)
+);?>
 </div>
 
 <div class="mb-5">
